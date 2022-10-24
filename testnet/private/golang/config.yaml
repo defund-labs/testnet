@@ -1,0 +1,60 @@
+global:
+    api-listen-addr: :5183
+    timeout: 10s
+    light-cache-size: 20
+chains:
+    - type: cosmos
+      value:
+        key: <keyname>
+        chain-id: defund-private-1
+        rpc-addr: http://localhost:26657
+        account-prefix: defund
+        keyring-backend: os
+        gas-adjustment: 1.2
+        gas-prices: 0.01ufetf
+        debug: false
+        timeout: 20s
+        output-format: json
+        sign-mode: direct
+    - type: cosmos
+      value:
+        key: <keyname>
+        chain-id: theta-testnet-001
+        rpc-addr: http://sentry-01.theta-testnet.polypore.xyz:26657
+        account-prefix: cosmos
+        keyring-backend: os
+        gas-adjustment: 1.2
+        gas-prices: 0.01uatom
+        debug: false
+        timeout: 20s
+        output-format: json
+        sign-mode: direct
+paths:
+    defundhub:
+        src:
+            chain-id: defund-private-1
+            client-id: 07-tendermint-0
+            connection-id: connection-0
+        dst:
+            chain-id: theta-testnet-001
+            client-id: 07-tendermint-688
+            connection-id: connection-578
+        src-channel-filter:
+            rule: ""
+            channel-list: []
+        interquery:
+            query: true
+    hubdefund:
+        src:
+            chain-id: theta-testnet-001
+            client-id: 07-tendermint-688
+            connection-id: connection-578
+        dst:
+            chain-id: defund-private-1
+            client-id: 07-tendermint-0
+            connection-id: connection-0
+        src-channel-filter:
+            rule: ""
+            channel-list: []
+        interquery:
+            query: false

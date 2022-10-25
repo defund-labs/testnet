@@ -17,7 +17,7 @@ Here are the minimal hardware configs required for running a validator/sentry no
 
 #### Software Requirements
 - Ubuntu 20.04 or higher
-- [Go v1.9.1](https://golang.org/doc/install)
+- [Go v1.19.1](https://golang.org/doc/install)
 
 ### Installation Steps
 
@@ -58,7 +58,7 @@ source ~/.profile
 go version
 ```
 
-Output should be: `go version go1.8 linux/amd64`
+Output should be: `go version go1.19.1 linux/amd64`
 
 
 #### Install Defund from source

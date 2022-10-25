@@ -77,7 +77,7 @@ defundd init $MONIKER_NAME --chain-id defund-testnet-2
 ```
 
 #### 3. Add/recover keys
-# To create new keypair - make sure you save the mnemonics!
+##### To create new keypair - make sure you save the mnemonics!
 ```sh
 defundd keys add <key-name> 
 ```

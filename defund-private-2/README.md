@@ -1,4 +1,4 @@
-# Defund Private Testnet: defund-testnet-2
+# Defund Private Testnet: defund-private-2
 
 ### Quick Links
 Genesis: TBA
@@ -73,7 +73,7 @@ make install
 
 #### 2. Init chain
 ```sh
-defundd init $MONIKER_NAME --chain-id defund-testnet-2
+defundd init $MONIKER_NAME --chain-id defund-private-2
 ```
 
 #### 3. Add/recover keys
@@ -92,7 +92,7 @@ defundd add-genesis-account <key-name> 100000000ufetf
 ##### 2. Create Gentx
 ```sh
 defundd gentx <key-name> 90000000ufetf \
---chain-id defund-testnet-2 \
+--chain-id defund-private-2 \
 --moniker="<moniker>" \
 --commission-max-change-rate=0.01 \
 --commission-max-rate=0.20 \

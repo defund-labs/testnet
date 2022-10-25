@@ -86,12 +86,12 @@ defundd keys add <key-name>
 #### Create Gentx
 ##### 1. Add genesis account:
 ```sh
-defundd add-genesis-account <key-name> 11000000ufetf
+defundd add-genesis-account <key-name> 100000000ufetf
 ```
 
 ##### 2. Create Gentx
 ```sh
-defundd gentx <key-name> 11000000ufetf \
+defundd gentx <key-name> 90000000ufetf \
 --chain-id defund-testnet-2 \
 --moniker="<moniker>" \
 --commission-max-change-rate=0.01 \

@@ -2,8 +2,11 @@
 
 ### Quick Links
 Genesis: TBA
+
 Git tag: v0.1.0
+
 Block explorer: **coming soon**
+
 Seeds: TBA
 
 #### Hardware Requirements
@@ -77,12 +80,6 @@ defundd init $MONIKER_NAME --chain-id defund-testnet-2
 # To create new keypair - make sure you save the mnemonics!
 ```sh
 defundd keys add <key-name> 
-```
-
-# Restore existing odin wallet with mnemonic seed phrase. 
-# You will be prompted to enter mnemonic seed. 
-```sh
-defundd keys add <key-name> --recover
 ```
 
 ### Instructions for Genesis Validators

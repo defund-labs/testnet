@@ -10,7 +10,7 @@ VALIDATOR_COINS=100000000$DENOM
 MAXBOND=90000000
 GENTX_FILE=$(find ./$CHAIN_ID/gentx -iname "*.json")
 LEN_GENTX=$(echo ${#GENTX_FILE})
-DEFUNDD_TAG="v0.1.0"
+DEFUNDD_TAG="v0.1.0-alpha"
 
 # Gentx Start date
 start="2022-10-24 01:00:00Z"

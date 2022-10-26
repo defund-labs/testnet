@@ -11,7 +11,7 @@ MAXBOND=90000000
 GENTX_FILE=$(find ./$CHAIN_ID/gentx -iname "*.json")
 LEN_GENTX=$(echo ${#GENTX_FILE})
 DEFUNDD_TAG="v0.1.0-alpha"
-BUILD_DIR=".build/defundd"
+BUILD_DIR="./build"
 
 # Gentx Start date
 start="2022-10-24 01:00:00Z"
@@ -58,11 +58,11 @@ else
     cd defund
     git checkout $DEFUNDD_TAG
     make build
-    chmod +x $BUILD_DIR
+    chmod +x $BUILD_DIR/defundd
 
-    $BUILD_DIR keys add $RANDOM_KEY --keyring-backend test --home $DEFUNDD_HOME
+    $BUILD_DIR/defundd keys add $RANDOM_KEY --keyring-backend test --home $DEFUNDD_HOME
 
-    $BUILD_DIR init --chain-id $CHAIN_ID validator --home $DEFUNDD_HOME
+    $BUILD_DIR/defundd init --chain-id $CHAIN_ID validator --home $DEFUNDD_HOME
 
     echo "..........Fetching genesis......."
     rm -rf $DEFUNDD_HOME/config/genesis.json
@@ -93,7 +93,7 @@ else
                 exit 1
             fi
 
-            $BUILD_DIR add-genesis-account $(jq -r '.body.messages[0].delegator_address' $line) $VALIDATOR_COINS --home $DEFUNDD_HOME
+            $BUILD_DIR/defundd add-genesis-account $(jq -r '.body.messages[0].delegator_address' $line) $VALIDATOR_COINS --home $DEFUNDD_HOME
         done
 
     mkdir -p $DEFUNDD_HOME/config/gentx/
@@ -102,20 +102,20 @@ else
     cp -r ../$CHAIN_ID/gentx/* $DEFUNDD_HOME/config/gentx/
 
     echo "..........Collecting gentxs......."
-    $BUILD_DIR collect-gentxs --home $DEFUNDD_HOME &> log.txt
+    $BUILD_DIR/defundd collect-gentxs --home $DEFUNDD_HOME &> log.txt
     sed -i '/persistent_peers =/c\persistent_peers = ""' $DEFUNDD_HOME/config/config.toml
     sed -i '/minimum-gas-prices =/c\minimum-gas-prices = "0.25ufetf"' $DEFUNDD_HOME/config/app.toml
 
-    $BUILD_DIR validate-genesis --home $DEFUNDD_HOME
+    $BUILD_DIR/defundd validate-genesis --home $DEFUNDD_HOME
 
     echo "..........Starting node......."
-    $BUILD_DIR start --home $DEFUNDD_HOME &
+    $BUILD_DIR/defundd start --home $DEFUNDD_HOME &
 
     sleep 90s
 
     echo "...checking network status.."
 
-    $BUILD_DIR status --node http://localhost:26657
+    $BUILD_DIR/defundd status --node http://localhost:26657
 
     echo "...Cleaning the stuff..."
     killall defundd >/dev/null 2>&1

@@ -56,7 +56,7 @@ else
     git clone https://github.com/defund-labs/defund
     cd defund
     git checkout $DEFUNDD_TAG
-    make build
+    make install
     chmod +x ./bin/defundd
 
     ./bin/defundd keys add $RANDOM_KEY --keyring-backend test --home $DEFUNDD_HOME

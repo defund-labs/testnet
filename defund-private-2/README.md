@@ -73,7 +73,7 @@ make install
 
 #### 2. Init chain
 ```sh
-defundd init $MONIKER_NAME --chain-id defund-private-2
+defundd init <moniker> --chain-id defund-private-2
 ```
 
 #### 3. Add/recover keys

@@ -103,7 +103,7 @@ defundd gentx <key-name> 90000000ufetf \
 ```
 
 #### Submit PR with Gentx and peer id
-1. Copy the contents of ${HOME}/.defundd/config/gentx/gentx-XXXXXXXX.json.
+1. Copy the contents of ${HOME}/.defund/config/gentx/gentx-XXXXXXXX.json.
 2. Fork https://github.com/defund-labs/testnet
 3. Create a file `gentx-{{VALIDATOR_NAME}}.json` under the `defund-private-2/gentx/` folder in the forked repo, paste the copied text into the file.
 4. Create a Pull Request to the main branch of the repository

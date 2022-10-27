@@ -86,7 +86,7 @@ defundd keys add <key-name>
 #### Create Gentx
 ##### 1. Add genesis account:
 ```sh
-defundd add-genesis-account <key-name> 100000000ufetf
+defundd add-genesis-account <wallet-address> 100000000ufetf
 ```
 
 ##### 2. Create Gentx

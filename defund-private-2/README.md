@@ -67,7 +67,7 @@ Output should be: `go version go1.19.1 linux/amd64`
 ```sh
 git clone https://github.com/defund-labs/defund
 cd defund
-git checkout v0.1.0
+git checkout v0.1.0-alpha
 make install
 ```
 

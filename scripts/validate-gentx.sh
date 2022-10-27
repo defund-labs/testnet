@@ -14,12 +14,12 @@ DEFUNDD_TAG="v0.1.0-alpha"
 BUILD_DIR="./build"
 
 # Gentx Start date
-start="2022-10-24 01:00:00Z"
+start="2022-10-28 00:00:00Z"
 # Compute the seconds since epoch for start date
 stTime=$(date --date="$start" +%s)
 
 # Gentx End date
-end="2022-10-28 23:59:00Z"
+end="2022-10-29 00:00:00Z"
 # Compute the seconds since epoch for end date
 endTime=$(date --date="$end" +%s)
 

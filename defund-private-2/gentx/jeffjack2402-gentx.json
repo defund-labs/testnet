@@ -1,0 +1,61 @@
+{
+    "body": {
+        "messages": [
+            {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                    "moniker": "jeffjack2402",
+                    "identity": "",
+                    "website": "",
+                    "security_contact": "",
+                    "details": "My discord: tytyNodeRunner#9277"
+                },
+                "commission": {
+                    "rate": "0.050000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "defund1dhu4q2l892uu0mds5nsdm9d9ay07vdwe9d6hdv",
+                "validator_address": "defundvaloper1dhu4q2l892uu0mds5nsdm9d9ay07vdwev9pntw",
+                "pubkey": {
+                    "@type": "/cosmos.crypto.ed25519.PubKey",
+                    "key": "u3lOuIaDScxRjzBldDEsmsvb/mT9rqPrK3Hyt9UwUxo="
+                },
+                "value": {
+                    "denom": "ufetf",
+                    "amount": "90000000"
+                }
+            }
+        ],
+        "memo": "274423fc6fa4c2b51f0d52ff128218e376f724dd@62.171.160.57:26656",
+        "timeout_height": "0",
+        "extension_options": [],
+        "non_critical_extension_options": []
+    },
+    "auth_info": {
+        "signer_infos": [
+            {
+                "public_key": {
+                    "@type": "/cosmos.crypto.secp256k1.PubKey",
+                    "key": "AhgtNiJwH6jj9rLUU1lwqB36fm+0hch5f/Cd/f8SmuwX"
+                },
+                "mode_info": {
+                    "single": {
+                        "mode": "SIGN_MODE_DIRECT"
+                    }
+                },
+                "sequence": "0"
+            }
+        ],
+        "fee": {
+            "amount": [],
+            "gas_limit": "200000",
+            "payer": "",
+            "granter": ""
+        }
+    },
+    "signatures": [
+        "pf+f8Aoodm3NVDo84ZcYzc1z/ZsWDh0Mz8i2tpRgsE4dDJEDES7WZm5Rr7OYBlWXPFSvY+4LThKw5BtAe9aKRg=="
+    ]
+}

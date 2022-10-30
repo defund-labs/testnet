@@ -1,0 +1,9 @@
+{"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"bestnodes","identity":"","website":"h
+ttps://t.me/bestnodes","security_contact":"https://t.me/bestnodes","details":"Best, Fast, Realible"},"commission":{"rate":"0.0500000000000
+00000","max_rate":"0.200000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"defund10
+r53mc0k0z7aup2544z7ek33stc5sr2k202vv2","validator_address":"defundvaloper10r53mc0k0z7aup2544z7ek33stc5sr2kr83g2g","pubkey":{"@type":"/cosm
+os.crypto.ed25519.PubKey","key":"rbGfEYiZaEwaQyw8DEaHtq/nBbMBq06sajEdBuInEWk="},"value":{"denom":"ufetf","amount":"90000000"}}],"memo":"01
+df0360c5343f7adc851cda73f0b180ee7c1157@45.61.161.141:26656","timeout_height":"0","extension_options":[],"non_critical_extension_options":[
+]},"auth_info":{"signer_infos":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Ah0yT9MG9sBsXK/yZoo9So8FXuT58Apd3b3fprNyus
+l2"},"mode_info":{"single":{"mode":"SIGN_MODE_DIRECT"}},"sequence":"0"}],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}}
+,"signatures":["ccxJg2ayHXHVwiajkjXtLWJ5tMnVDo+REpJsvRbuE5ErnMIVAPmjOnTX4v7z0eZ2MD4oXoITYyGbGtJr/EZN/w=="]}

@@ -1,1 +1,5 @@
-
+{"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"markoffka","identity":"","website":"","security_contact":"","details":""},"commission":{"rate":"0.050000000000000000","max_rate":"0.20000000000000
+0000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"defund156c9en0clmnhl7shumsvlfjusemn7wdcjs2vaz","validator_address":"defundvaloper156c9en0clmnhl7shumsvlfjusemn7wdcmc3gmq","pubkey":{"@type":"/cosmos.cry
+pto.ed25519.PubKey","key":"k3uOqe6ktxM51LdESsGRRVveYG6fqYz7IzumiyCk7wc="},"value":{"denom":"ufetf","amount":"90000000"}}],"memo":"10c26b2a8c6e173112a9b3a328ee7be969722a89@192.168.84.219:26656","timeout_height":"0","extension_options":[],"non_criti
+cal_extension_options":[]},"auth_info":{"signer_infos":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A+03sAGGdMeJPGM8+YFLSd45wnhbo0KBKK4x0j61B0o3"},"mode_info":{"single":{"mode":"SIGN_MODE_DIRECT"}},"sequence":"0"}],"fee":{"amou
+nt":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":["KQXXVD2/zSrKS6xG7GI5RTj0HurBd7oV5RsJNlE3pSohTzMVvbJnzUYn6LeVZp3UopeVBpnZsTPUEdo5qBsTkw=="]}

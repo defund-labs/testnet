@@ -1,5 +1,4 @@
 # Defund Private Testnet: defund-private-2
-
 ### Quick Links
 Genesis: TBA
 
@@ -67,7 +66,7 @@ Output should be: `go version go1.19.1 linux/amd64`
 ```sh
 git clone https://github.com/defund-labs/defund
 cd defund
-git checkout v0.1.0-alpha
+git checkout v0.1.0
 make install
 ```
 
@@ -82,30 +81,61 @@ defundd init <moniker> --chain-id defund-private-2
 defundd keys add <key-name> 
 ```
 
-### Instructions for Genesis Validators
-#### Create Gentx
-##### 1. Add genesis account:
+#### 4. Download genesis file
+The genesis file is how the node will know what network to connect to.
 ```sh
-defundd add-genesis-account <key-name> 100000000ufetf
+wget -O ~/.defund/config/genesis.json TBA
 ```
 
-##### 2. Create Gentx
+#### 5. Set seeds
+Seeds should be used in lieu of peers for network launch. Seeds generally are more stable, and will handle the peer exchange process for the node.
 ```sh
-defundd gentx <key-name> 90000000ufetf \
---chain-id defund-private-2 \
---moniker="<moniker>" \
---commission-max-change-rate=0.01 \
---commission-max-rate=0.20 \
---commission-rate=0.05 \
---details="XXXXXXXX" \
---security-contact="XXXXXXXX" \
---website="XXXXXXXX"
+export SEEDS=TBD
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/" ~/.defund/config/config.toml
 ```
 
-#### Submit PR with Gentx and peer id
-1. Copy the contents of ${HOME}/.defund/config/gentx/gentx-XXXXXXXX.json.
-2. Fork https://github.com/defund-labs/testnet
-3. Create a file `gentx-{{VALIDATOR_NAME}}.json` under the `defund-private-2/gentx/` folder in the forked repo, paste the copied text into the file.
-4. Create a Pull Request to the main branch of the repository
+#### 6. Set minimum gas prices
+For RPC nodes and Validator nodes we recommend setting the following `minimum-gas-prices`.
 
-### Await further instruction!
+In `$HOME/.defund/config/app.toml`, set minimum gas prices:
+```sh:
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025ufetf\"/" ~/.defund/config/app.toml
+```
+
+#### 7. Start Defund
+You can now launch the network!
+```sh:
+defundd start
+```
+
+However, running the network this way requires a shell to always be open. You can, instead, create a service file that will manage running the network for you.
+
+```sh
+sudo cat <<EOF >> /etc/systemd/system/defundd.service
+[Unit]
+Description=Defund Service
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+WorkingDirectory=$HOME
+ExecStart=$HOME/go/bin/defund start
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload && systemctl enable defundd
+sudo systemctl restart defundd && journalctl -o cat -fu defundd
+```
+
+####  Backup validator key
+
+There are certain files that you need to backup to be able to restore your validator if, for some reason, it is damaged or lost in some way. Please make a secure backup of the following file located in `~/.defund/config/`:
+
+-   `priv_validator_key.json`
+
+It is recommended that you encrypt the backup of these files.

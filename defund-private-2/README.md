@@ -1,6 +1,6 @@
 # Defund Private Testnet: defund-private-2
 ### Quick Links
-Genesis: TBA
+Genesis: https://raw.githubusercontent.com/defund-labs/testnet/main/defund-private-2/genesis.json
 
 Git tag: v0.1.0
 
@@ -84,7 +84,7 @@ defundd keys add <key-name>
 #### 4. Download genesis file
 The genesis file is how the node will know what network to connect to.
 ```sh
-wget -O ~/.defund/config/genesis.json TBA
+wget -O ~/.defund/config/genesis.json https://raw.githubusercontent.com/defund-labs/testnet/main/defund-private-2/genesis.json
 ```
 
 #### 5. Set seeds
@@ -102,14 +102,8 @@ In `$HOME/.defund/config/app.toml`, set minimum gas prices:
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025ufetf\"/" ~/.defund/config/app.toml
 ```
 
-#### 7. Start Defund
-You can now launch the network!
-```sh:
-defundd start
-```
-
-#### 7a. Create a Defund service file
-However, running the network this way requires a shell to always be open. You can, instead, create a service file that will manage running the network for you.
+#### 7. Create a Defund service file
+We need to create a service file which will run the node in the background. 
 
 ```sh
 sudo cat <<EOF >> /etc/systemd/system/defundd.service
@@ -131,7 +125,9 @@ WantedBy=multi-user.target
 EOF
 ```
 
-Now enable and start the service.
+#### 8. Start Defund
+
+Finall, we can enable and start the service.
 
 ```
 sudo systemctl daemon-reload && systemctl enable defundd

@@ -108,6 +108,7 @@ You can now launch the network!
 defundd start
 ```
 
+#### 7a. Create a Defund service file
 However, running the network this way requires a shell to always be open. You can, instead, create a service file that will manage running the network for you.
 
 ```sh
@@ -128,6 +129,12 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
+
+Now enable and start the service.
+
+```
 sudo systemctl daemon-reload && systemctl enable defundd
 sudo systemctl restart defundd && journalctl -o cat -fu defundd
 ```
+

@@ -131,11 +131,3 @@ EOF
 sudo systemctl daemon-reload && systemctl enable defundd
 sudo systemctl restart defundd && journalctl -o cat -fu defundd
 ```
-
-####  Backup validator key
-
-There are certain files that you need to backup to be able to restore your validator if, for some reason, it is damaged or lost in some way. Please make a secure backup of the following file located in `~/.defund/config/`:
-
--   `priv_validator_key.json`
-
-It is recommended that you encrypt the backup of these files.

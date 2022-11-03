@@ -6,7 +6,7 @@ Git tag: v0.1.0
 
 Block explorer: **coming soon**
 
-Seeds: `85279852bd306c385402185e0125dffeed36bf22@38.146.3.194:26656`
+Seeds: `85279852bd306c385402185e0125dffeed36bf22@38.146.3.194:26656,09ce2d3fc0fdc9d1e879888e7d72ae0fefef6e3d@65.108.105.48:11256`
 
 #### Hardware Requirements
 Here are the minimal hardware configs required for running a validator/sentry node
@@ -90,7 +90,7 @@ wget -O ~/.defund/config/genesis.json https://raw.githubusercontent.com/defund-l
 #### 5. Set seeds
 Seeds should be used in lieu of peers for network launch. Seeds generally are more stable, and will handle the peer exchange process for the node.
 ```sh
-export SEEDS=85279852bd306c385402185e0125dffeed36bf22@38.146.3.194:26656
+export SEEDS=85279852bd306c385402185e0125dffeed36bf22@38.146.3.194:26656,09ce2d3fc0fdc9d1e879888e7d72ae0fefef6e3d@65.108.105.48:11256
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/" ~/.defund/config/config.toml
 ```
 

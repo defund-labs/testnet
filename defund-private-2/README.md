@@ -106,7 +106,7 @@ sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025ufetf\"/"
 We need to create a service file which will run the node in the background. 
 
 ```sh
-sudo cat <<EOF >> /etc/systemd/system/defundd.service
+sudo tee  /etc/systemd/system/defundd.service /dev/null <<EOF
 [Unit]
 Description=Defund Service
 After=network.target

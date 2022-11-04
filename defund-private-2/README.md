@@ -133,4 +133,26 @@ Finall, we can enable and start the service.
 sudo systemctl daemon-reload && systemctl enable defundd
 sudo systemctl restart defundd && journalctl -o cat -fu defundd
 ```
+#### 9. Create a validator
+
+Make sure that you are synchronized. If status show:
+- `true` - your synchronization is in progress.
+- `false` - you are synchronized and ready to create a validator.
+```
+defundd status 2>&1 | jq .SyncInfo
+```
+In [Discord](https://discord.gg/R5WcyvxAK6) chanel claim test tokens from the faucet and create a validator.
+```
+defundd tx staking create-validator \
+--amount="19000000ufetf" \
+--pubkey=$(defundd tendermint show-validator) \
+--moniker="YOUR_MONIKER" \
+--chain-id="defund-private-2" \
+--from="YOUR_WALLET" \
+--commission-rate="0.1" \
+--commission-max-rate=0.15 \
+--commission-max-change-rate=0.1 \
+--min-self-delegation=1 \
+--fees=500ufetf
+```
 

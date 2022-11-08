@@ -130,7 +130,7 @@ EOF
 Finall, we can enable and start the service.
 
 ```
-sudo systemctl daemon-reload && systemctl enable defundd
+sudo systemctl daemon-reload && sudo systemctl enable defundd
 sudo systemctl restart defundd && journalctl -o cat -fu defundd
 ```
 

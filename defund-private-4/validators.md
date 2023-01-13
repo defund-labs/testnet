@@ -71,7 +71,7 @@ Download and replace the genesis file:
 ```bash
 cd $HOME/.defund/config
 
-curl -s https://raw.githubusercontent.com/defund-labs/defund/v0.0.2/testnet/private/genesis.json > ~/.defund/config/genesis.json
+curl -s https://raw.githubusercontent.com/defund-labs/testnet/main/defund-private-4/genesis.json > ~/.defund/config/genesis.json
 
 Please do not skip the next step. Run this command and ensure the right genesis is being used.
 ```

@@ -81,7 +81,7 @@ Please do not skip the next step. Run this command and ensure the right genesis 
 ```bash
 # check genesis shasum
 sha256sum ~/.defund/config/genesis.json
-# output must be: 268f625672ed618a844ee32bcfc3a66d51921b12e6a966a0965aa296fb82c032
+# output must be: db13a33fbb4048c8701294de79a42a2b5dff599d653c0ee110390783c833208b
 # other wise you have an incorrect genesis file
 ```
 
@@ -161,7 +161,7 @@ defundd tx staking create-validator \
   --amount=1000000ufetf \
   --pubkey=$(defundd tendermint show-validator) \
   --moniker="choose a moniker" \
-  --chain-id=defund-private-1 \
+  --chain-id=defund-private-4 \
   --commission-rate="0.10" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \

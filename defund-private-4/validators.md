@@ -62,7 +62,7 @@ Then press ```Ctrl+O``` then enter to save, then ```Ctrl+X``` to exit
 ## Optimize Defund
 
 ```bash
-bash $HOME/testnet/scripts/optimize.sh
+bash $HOME/defund/devtools/optimize.sh
 ```
 
 ## Genesis State

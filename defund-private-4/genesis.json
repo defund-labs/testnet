@@ -51,6 +51,13 @@
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "defund1lv2835l7pknhug59rzmugrszf5ttcv6w5hjr5u",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
         }
       ]
     },
@@ -80,6 +87,15 @@
         },
         {
           "address": "defund1jld540948z5yv62ud05m9s36jdlu9w5mq0gd5l",
+          "coins": [
+            {
+              "denom": "ufetf",
+              "amount": "100000000000"
+            }
+          ]
+        },
+        {
+          "address": "defund1lv2835l7pknhug59rzmugrszf5ttcv6w5hjr5u",
           "coins": [
             {
               "denom": "ufetf",
@@ -137,7 +153,69 @@
       "allowances": []
     },
     "genutil": {
-      "gen_txs": []
+      "gen_txs": [
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "casper",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "defund1lv2835l7pknhug59rzmugrszf5ttcv6w5hjr5u",
+                "validator_address": "defundvaloper1lv2835l7pknhug59rzmugrszf5ttcv6walf8j7",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "rn716bgPN2fiQ3+BegdWAwu6a74N7NVWOO8gBX8bXgI="
+                },
+                "value": {
+                  "denom": "ufetf",
+                  "amount": "100000000"
+                }
+              }
+            ],
+            "memo": "d837b7f78c03899d8964351fb95c78e84128dff6@10.0.20.49:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "Ar9Pl8sVe8bN/p7MeasKYKsAAydG2Az7HW0OeBYw0MOD"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            }
+          },
+          "signatures": [
+            "qVyEsiP8Aue7S3A0aQJuPwU6cJjgn8z9zds6UsjEKG0muO7hE7SIX13hzvCcwefolYvyyP6Ev1y2rTqVrVqiWA=="
+          ]
+        }
+      ]
     },
     "gov": {
       "starting_proposal_id": "1",

@@ -161,7 +161,7 @@ defundd tx staking create-validator \
   --amount=1000000ufetf \
   --pubkey=$(defundd tendermint show-validator) \
   --moniker="choose a moniker" \
-  --chain-id=defund-private-4 \
+  --chain-id=orbit-alpha-1 \
   --commission-rate="0.10" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \

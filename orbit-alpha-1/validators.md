@@ -47,13 +47,13 @@ nano config.toml
 Use page down or arrow keys to get to the line that says seeds = "" and replace it with the following:
 
 ```bash
-seeds = ""
+seeds = "f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656"
 ```
 
 Next, add persistent peers:
 
 ```bash
-persistent_peers = ""
+persistent_peers = "f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656"
 ```
 
 Then press ```Ctrl+O``` then enter to save, then ```Ctrl+X``` to exit
@@ -61,7 +61,7 @@ Then press ```Ctrl+O``` then enter to save, then ```Ctrl+X``` to exit
 ## Optimize Defund
 
 ```bash
-bash $HOME/testnet/scripts/optimize.sh
+bash $HOME/defund/devtools/optimize.sh
 ```
 
 ## Genesis State

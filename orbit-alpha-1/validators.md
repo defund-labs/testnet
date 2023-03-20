@@ -81,7 +81,7 @@ Please do not skip the next step. Run this command and ensure the right genesis 
 ```bash
 # check genesis shasum
 sha256sum ~/.defund/config/genesis.json
-# output must be: 9a1354e2672d5ea3e0da219c38466acace385e3580d348862c1c5fa824a29ab5
+# output must be: 58916f9c7c4c4b381f55b6274bce9b8b8d482bfb15362099814ff7d0c1496658
 # other wise you have an incorrect genesis file
 ```
 

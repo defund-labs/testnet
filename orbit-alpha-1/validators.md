@@ -47,13 +47,13 @@ nano config.toml
 Use page down or arrow keys to get to the line that says seeds = "" and replace it with the following:
 
 ```bash
-seeds = "f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656"
+seeds = "f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656,2b76e96658f5e5a5130bc96d63f016073579b72d@rpc-1.defund.nodes.guru:45656"
 ```
 
 Next, add persistent peers:
 
 ```bash
-persistent_peers = "f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656"
+persistent_peers = "f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656,f8093378e2e5e8fc313f9285e96e70a11e4b58d5@rpc-2.defund.nodes.guru:45656,878c7b70a38f041d49928dc02418619f85eecbf6@rpc-3.defund.nodes.guru:45656"
 ```
 
 Then press ```Ctrl+O``` then enter to save, then ```Ctrl+X``` to exit

@@ -1,4 +1,4 @@
-# Joining the defund-private-4
+# Joining the Orbit Testnet
 
 ### Install Dependencies
 
